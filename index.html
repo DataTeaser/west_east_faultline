@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="lato/fontface.min.css">
+
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -17,8 +19,14 @@
     <meta property="og:image" content="http://datateaser.github.io/west_east_faultline/fault.png" />
 
     <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
         body {
-            font-family: Helvetica;
+            font-family: "latoregular", Helvetica, Arial;
+            margin-bottom: 60px;
         }
 
         #title {
@@ -26,7 +34,7 @@
         }
 
         #map {
-            padding: 30px 100px 100px 100px;
+            padding: 30px 100px 0px 100px;
         }
 
         #logo {
@@ -36,12 +44,28 @@
         .social-media {
             color: #888;
         }
+
+        #header {
+            background-color: #09f;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 100px;
+            padding-top: 20px;
+            background-color: #eee;
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12" id="header">
                 <h1 id="title">Partial Map of West and East Valley Fault Line</h1>
             </div>
         </div>
@@ -50,17 +74,22 @@
                 <script src="https://gist.github.com/MojoJolo/a745e1f5ba87b6d5f81a.js?height=700&width=500"></script>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 text-left">
-                <p>Data source from <a href="http://www.s1expeditions.com/2014/07/158-west-east-valley-fault-line.html">s1expeditions.com</a>. Posted on July 11, 2014</p>
-            </div>
-            <div class="col-lg-6 text-right">
-                Made by <a href="http://www.datateaser.com/"><img id="logo" src="dt-logo-web.svg" alt="Data Teaser"></a>
-                <br>
-                <a href="https://twitter.com/DataTeaser_" target="_blank"><i class="social-media fa fa-2x fa-twitter"></i></a>
-                <a href="https://www.facebook.com/pages/DataTeaser/1559763620930573" target="_blank"><i class="social-media fa fa-2x fa-facebook-official"></i></a>
+        
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-left">
+                    <p><em>Data source from <a href="http://www.s1expeditions.com/2014/07/158-west-east-valley-fault-line.html">s1expeditions.com</a>. Posted on July 11, 2014</em></p>
+                </div>
+                <div class="col-lg-6 text-right">
+                    Made by <a href="http://www.datateaser.com/"><img id="logo" src="dt-logo-web.svg" alt="Data Teaser"></a>
+                    <br>
+                    <a href="https://twitter.com/DataTeaser_" target="_blank"><i class="social-media fa fa-2x fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/pages/DataTeaser/1559763620930573" target="_blank"><i class="social-media fa fa-2x fa-facebook-official"></i></a>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
